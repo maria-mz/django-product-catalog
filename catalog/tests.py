@@ -102,3 +102,11 @@ class ProductsViewTests(TestCase):
         response = self.client.get(self.products_url, {"tags": [9999]})
         products = response.context["products"]
         self.assertEqual(len(products), 20)
+
+    def test_products_view_avoids_n_plus_one_queries(self):
+        # 1 for category choices in form
+        # 1 for tag choices in form
+        # 1 for products and categories (joined via select_related)
+        # 1 for tags (prefetch)
+        with self.assertNumQueries(4):
+            self.get_products()

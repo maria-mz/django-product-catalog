@@ -29,7 +29,9 @@
     <h2>Products</h2>
     <ul>
         {% for product in products %}
-        <li>{{ product.description }}</li>
+        <li>
+            <strong>{{ product.description }}</strong> · {{ product.category.name }} · <em>{{ product.tags.all|join:", " }}</em>
+        </li>
         {% endfor %}
     </ul>
     <p>{{ products|length }} products</p>

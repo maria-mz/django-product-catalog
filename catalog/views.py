@@ -7,7 +7,7 @@ from .forms import ProductFilterForm
 def products_view(request: HttpRequest) -> HttpResponse:
     form = ProductFilterForm(request.GET)
 
-    products = Product.objects.all()
+    products = Product.objects.select_related("category").prefetch_related("tags")
 
     if form.is_valid():
         query = form.cleaned_data['query']

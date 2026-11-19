@@ -1,7 +1,8 @@
 <form method="get">
-    <input type="text" name="q" value="{{ search_query }}" placeholder="Search descriptions..."/>
+    {{ form.query }}
+    {{ form.category }}
     <button type="submit">Search</button>
-    {% if search_query %}
+    {% if request.GET %}
         <a href="{% url 'products' %}">Clear</a>
     {% endif %}
 </form>

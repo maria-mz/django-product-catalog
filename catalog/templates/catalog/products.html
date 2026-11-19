@@ -1,17 +1,37 @@
-<form method="get">
-    {{ form.query }}
-    {{ form.category }}
-    {{ form.tags }}
-    <button type="submit">Search</button>
-    {% if request.GET %}
-        <a href="{% url 'products' %}">Clear</a>
-    {% endif %}
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+<body>
+    <form method="get">
+        <fieldset>
+            <legend>Search</legend>
+            <p>{{ form.query }}</p>
+        </fieldset>
 
-<ul>
-    {% for product in products %}
-    <li>{{ product.description }}</li>
-    {% empty %}
-    <li>No products found</li>
-    {% endfor %}
-</ul>
+        <fieldset>
+            <legend>Filters</legend>
+            <p>{{ form.category.label_tag }} {{ form.category }}</p>
+            <p>{{ form.tags.label_tag }} {{ form.tags }}</p>
+        </fieldset>
+
+        <br>
+
+        <button type="submit">Search & Filter</button>
+        {% if request.GET %}
+            <a href="{% url 'products' %}">Clear</a>
+        {% endif %}
+    </form>
+
+    <h2>Products</h2>
+    <ul>
+        {% for product in products %}
+        <li>{{ product.description }}</li>
+        {% endfor %}
+    </ul>
+    <p>{{ products|length }} products</p>
+</body>
+</html>

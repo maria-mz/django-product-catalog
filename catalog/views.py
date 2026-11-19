@@ -18,9 +18,8 @@ def products_view(request: HttpRequest) -> HttpResponse:
             products = products.filter(description__icontains=query)
         if category:
             products = products.filter(category=category)
-        if tags:
-            for tag in tags:
-                products = products.filter(tags=tag)
+        for tag in tags:
+            products = products.filter(tags=tag)
 
     context = {
         'products': products,

@@ -1,0 +1,15 @@
+<form method="get">
+    <input type="text" name="q" value="{{ search_query }}" placeholder="Search descriptions..."/>
+    <button type="submit">Search</button>
+    {% if search_query %}
+        <a href="{% url 'products' %}">Clear</a>
+    {% endif %}
+</form>
+
+<ul>
+    {% for product in products %}
+    <li>{{ product.description }}</li>
+    {% empty %}
+    <li>No products found</li>
+    {% endfor %}
+</ul>

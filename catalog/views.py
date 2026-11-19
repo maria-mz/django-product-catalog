@@ -10,13 +10,17 @@ def products_view(request: HttpRequest) -> HttpResponse:
     products = Product.objects.all()
 
     if form.is_valid():
-        query = form.cleaned_data["query"]
+        query = form.cleaned_data['query']
         category = form.cleaned_data['category']
+        tags = form.cleaned_data['tags']
 
         if query:
             products = products.filter(description__icontains=query)
         if category:
             products = products.filter(category=category)
+        if tags:
+            for tag in tags:
+                products = products.filter(tags=tag)
 
     context = {
         'products': products,

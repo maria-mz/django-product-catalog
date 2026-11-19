@@ -1,6 +1,7 @@
 <form method="get">
     {{ form.query }}
     {{ form.category }}
+    {{ form.tags }}
     <button type="submit">Search</button>
     {% if request.GET %}
         <a href="{% url 'products' %}">Clear</a>

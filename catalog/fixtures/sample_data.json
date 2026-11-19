@@ -1,0 +1,386 @@
+[
+{
+  "model": "catalog.category",
+  "pk": 10,
+  "fields": {
+    "name": "Breakers"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 11,
+  "fields": {
+    "name": "Receptacles"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 12,
+  "fields": {
+    "name": "Wire & Cable"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 13,
+  "fields": {
+    "name": "Boxes"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 14,
+  "fields": {
+    "name": "Conduit & Fittings"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 15,
+  "fields": {
+    "name": "Lighting"
+  }
+},
+{
+  "model": "catalog.tag",
+  "pk": 13,
+  "fields": {
+    "name": "UL Listed"
+  }
+},
+{
+  "model": "catalog.tag",
+  "pk": 14,
+  "fields": {
+    "name": "Indoor"
+  }
+},
+{
+  "model": "catalog.tag",
+  "pk": 15,
+  "fields": {
+    "name": "Outdoor Rated"
+  }
+},
+{
+  "model": "catalog.tag",
+  "pk": 16,
+  "fields": {
+    "name": "Copper"
+  }
+},
+{
+  "model": "catalog.tag",
+  "pk": 17,
+  "fields": {
+    "name": "Aluminum"
+  }
+},
+{
+  "model": "catalog.tag",
+  "pk": 18,
+  "fields": {
+    "name": "GFCI"
+  }
+},
+{
+  "model": "catalog.tag",
+  "pk": 19,
+  "fields": {
+    "name": "Tamper-Resistant"
+  }
+},
+{
+  "model": "catalog.tag",
+  "pk": 20,
+  "fields": {
+    "name": "LED"
+  }
+},
+{
+  "model": "catalog.tag",
+  "pk": 21,
+  "fields": {
+    "name": "PVC"
+  }
+},
+{
+  "model": "catalog.tag",
+  "pk": 22,
+  "fields": {
+    "name": "Steel"
+  }
+},
+{
+  "model": "catalog.tag",
+  "pk": 23,
+  "fields": {
+    "name": "Residential"
+  }
+},
+{
+  "model": "catalog.tag",
+  "pk": 24,
+  "fields": {
+    "name": "Commercial"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 7,
+  "fields": {
+    "description": "20A Single-Pole Breaker",
+    "category": 10,
+    "tags": [
+      14,
+      13
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 8,
+  "fields": {
+    "description": "20A GFCI Outlet, Weather-Resistant",
+    "category": 11,
+    "tags": [
+      18,
+      15,
+      13
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 9,
+  "fields": {
+    "description": "12 AWG Copper THHN Wire, 500ft",
+    "category": 12,
+    "tags": [
+      16,
+      13
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 10,
+  "fields": {
+    "description": "15A Duplex Outlet",
+    "category": 11,
+    "tags": [
+      14
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 11,
+  "fields": {
+    "description": "Outdoor Weatherproof Junction Box",
+    "category": 13,
+    "tags": [
+      15,
+      21
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 12,
+  "fields": {
+    "description": "15A Single-Pole Breaker",
+    "category": 10,
+    "tags": [
+      14,
+      23,
+      13
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 13,
+  "fields": {
+    "description": "30A Double-Pole Breaker",
+    "category": 10,
+    "tags": [
+      14,
+      23,
+      13
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 14,
+  "fields": {
+    "description": "20A GFCI Breaker",
+    "category": 10,
+    "tags": [
+      18,
+      14,
+      13
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 15,
+  "fields": {
+    "description": "15A Tamper-Resistant Duplex Outlet",
+    "category": 11,
+    "tags": [
+      14,
+      23,
+      19,
+      13
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 16,
+  "fields": {
+    "description": "20A Commercial-Grade Duplex Outlet",
+    "category": 11,
+    "tags": [
+      24,
+      14,
+      13
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 17,
+  "fields": {
+    "description": "14 AWG Copper NM-B Cable, 250ft",
+    "category": 12,
+    "tags": [
+      16,
+      14,
+      23,
+      13
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 18,
+  "fields": {
+    "description": "6 AWG Aluminum XHHW Wire, 500ft",
+    "category": 12,
+    "tags": [
+      17,
+      24,
+      15
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 19,
+  "fields": {
+    "description": "4in Square Steel Junction Box",
+    "category": 13,
+    "tags": [
+      24,
+      14,
+      22
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 20,
+  "fields": {
+    "description": "Single-Gang PVC Old-Work Box",
+    "category": 13,
+    "tags": [
+      14,
+      21,
+      23
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 21,
+  "fields": {
+    "description": "3/4in EMT Conduit, 10ft",
+    "category": 14,
+    "tags": [
+      24,
+      14,
+      22
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 22,
+  "fields": {
+    "description": "1in Schedule 40 PVC Conduit, 10ft",
+    "category": 14,
+    "tags": [
+      15,
+      21,
+      13
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 23,
+  "fields": {
+    "description": "3/4in EMT Set-Screw Connector",
+    "category": 14,
+    "tags": [
+      24,
+      22
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 24,
+  "fields": {
+    "description": "6in LED Recessed Downlight",
+    "category": 15,
+    "tags": [
+      14,
+      20,
+      23,
+      13
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 25,
+  "fields": {
+    "description": "4ft LED Strip Fixture",
+    "category": 15,
+    "tags": [
+      24,
+      14,
+      20
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 26,
+  "fields": {
+    "description": "LED Wall Pack, Dusk-to-Dawn",
+    "category": 15,
+    "tags": [
+      24,
+      20,
+      15,
+      13
+    ]
+  }
+}
+]

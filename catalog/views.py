@@ -11,8 +11,8 @@ def products_view(request: HttpRequest) -> HttpResponse:
     """
     form = ProductFilterForm(request.GET)
 
-    # Preload category and tags in memory to avoid N+1 queries when rendering
-    # product lines
+    # Instead of Product.objects.all(), retrieve categories (via join) and tags
+    # (via one extra query) with the products to avoid N+1 queries when rendering
     products = Product.objects.select_related("category").prefetch_related("tags")
 
     if form.is_valid():
